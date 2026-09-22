@@ -3,38 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Travel Sphere | Explore the World</title>
 </head>
 <body>
+
+
     <header>
-        <nav>
-            <a href="index.html">Travel Sphere</a>
-            <a href="destinations.html">Destinations</a>
-            <a href="trip-planner.html">Trip Planner</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+        <h1>Travel Sphere</h1>
+          <nav>
+             <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+             </ul>
+         </nav>
+    </header>
+
         <main>
             <section>
-                <h1>Explore.Plan.Travel.</h1>
-            <p>Discover destinations and create your perfect trip.</p>
+                <h2>Explore.Plan.Travel.</h2>
+                 <p> Discover beautiful destinations, plan your perfect trip
+                and create unforgettable memories with Travel Sphere.</p>
+
+
             <a href="destinations.html">Explore Destinations </a>
             </section>
             
             <section>
                 <h2>Popular Destinations</h2>
-                <article>
-                    <img src="https://images.pexels.com/photos/20717139/pexels-photo-20717139/free-photo-of-beach-and-hill-on-sea-coast.jpeg?cs=tinysrgb&dpr=1&w=500" alt="Goa Beach">
-                    <h3>Goa</h3>
-                    <p>Palaces,forts and culture.</p>
-                    <a href="destination-details.html">Explore</a>
-                </article>
-            </section>
+                <figure>
+                    <picture>
+                        <source
+                        media="(min-width:800px)"
+                        srcset="https://images.pexels.com/photos/36190181/pexels-photo-36190181/free-photo-of-mountain-range-under-early-morning-light.jpeg?cs=tinysrgb&dpr=1&w=500">
+                         <img
+                           src="https://images.pexels.com/photos/36190181/pexels-photo-36190181/free-photo-of-mountain-range-under-early-morning-light.jpeg?cs=tinysrgb&dpr=1&w=500"
+                           alt=" Beautiful Mountain Landscape"
+                         width="200">
+                    </picture>
+                    <figcaption>Himachal Pradesh - Mountains, valleys and adventures.</figcaption>
+                </figure>
+                </section>
+
+                <section>
+                    <h2>Why Travel With Us</h2>
+                    <ul>
+                        <li>Discover amazing destinations</li>
+                        <li>Plan your trip easily</li>
+                        <li>Find activities and attractions</li>
+                        <li>Create personalized travel plans</li>
+                    </ul>
+                    <h3>How to Plan your trip</h3>
+                    <ol>
+                        <li>Choose your destination</li>
+                        <li>Select your travel dates</li>
+                        <li>Choose activities</li>
+                        <li>Create your itinerary</li>
+                    </ol>
+                </section>
+
+                <section>
+                    <h2>Popular Destinations</h2>
+                    <table border="1">
+                        <tr>
+                            <th>Destination</th>
+                            <th>Best Time to Visit</th>
+                            <th>Duration</th>
+                            <th>Budget</th>
+                        </tr>
+                        <tr>
+                            <td>Manali</td>
+                            <td>Mountains</td>
+                            <td>3 Days</td>
+                            <td>₹7,000</td>
+                        </tr>
+                        <tr>
+                            <td>Goa</td>
+                            <td>Beaches</td>
+                            <td>4 Days</td>
+                            <td>₹10,000</td>
+                        </tr>
+                        <tr>
+                            <td>Jaipur</td>
+                            <td>Culture</td>
+                            <td>3 Days</td>
+                            <td>₹9,000</td>
+                        </tr>
+                    </table>
+                </section>
+
+
+                <section>
+                    <h2>Explore on Map</h2>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.1234567890123!2d77.12345678901234!3d28.12345678901234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390c123456789012%3A0x1234567890123456!2sIndia!5e0!3m2!1sen!2sus!4v1234567890123"
+                        width="200" height="150" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </section>
+
+                <section>
+                    <h2>Travel Sounds</h2>
+                    <audio controls>
+                        <source src="travel-sounds.mp3" type="audio/mpeg">
+                    </audio>
+                </section>
+                
+
+                <section>
+                    <h2>Travel Inspirations</h2>
+                    <video controls width="200">
+                        <source src="travel-inspirations.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </section>
+
+
+
+
             </main>
             
-            <footer>
+            <footer id="contact">
+                <h3>Travel Sphere</h3>
+                <p>
+                    Explore the World.Create memories.
+                </p>
                 <p>&copy; 2026 Travel Sphere. All rights reserved.</p>
             </footer>
-    </header>
+    
 </body>
 </html>
