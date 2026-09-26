@@ -3,14 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="description"
+        content="Travel Sphere helps you discover destinations and plan memorable trips.">
+
+    <meta
+        name="author"
+        content="Travel Sphere">
     <title>Travel Sphere | Explore the World</title>
+    
+
 </head>
 <body>
 
 
     <header>
         <h1>Travel Sphere</h1>
-          <nav>
+          <nav aria-label="Main navigation">
              <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="destinations.html">Destinations</a></li>
@@ -19,10 +28,10 @@
              </ul>
          </nav>
     </header>
-
+        
         <main>
-            <section>
-                <h2>Explore.Plan.Travel.</h2>
+            <section id="hero">
+                <h2>Explore. Plan. Travel.</h2>
                  <p> Discover beautiful destinations, plan your perfect trip
                 and create unforgettable memories with Travel Sphere.</p>
 
@@ -30,7 +39,7 @@
             <a href="destinations.html">Explore Destinations </a>
             </section>
             
-            <section>
+            <section id="popular-destinations" >
                 <h2>Popular Destinations</h2>
                 <figure>
                     <picture>
@@ -39,7 +48,7 @@
                         srcset="https://images.pexels.com/photos/36190181/pexels-photo-36190181/free-photo-of-mountain-range-under-early-morning-light.jpeg?cs=tinysrgb&dpr=1&w=500">
                          <img
                            src="https://images.pexels.com/photos/36190181/pexels-photo-36190181/free-photo-of-mountain-range-under-early-morning-light.jpeg?cs=tinysrgb&dpr=1&w=500"
-                           alt=" Beautiful Mountain Landscape"
+                           alt="Beautiful Mountain Landscape"
                          width="200">
                     </picture>
                     <figcaption>Himachal Pradesh - Mountains, valleys and adventures.</figcaption>
@@ -66,12 +75,15 @@
                 <section>
                     <h2>Popular Destinations</h2>
                     <table border="1">
+                        <thead>
                         <tr>
                             <th>Destination</th>
-                            <th>Best Time to Visit</th>
+                            <th>Type</th>
                             <th>Duration</th>
                             <th>Budget</th>
                         </tr>
+                        </thead>
+                        <tbody>
                         <tr>
                             <td>Manali</td>
                             <td>Mountains</td>
@@ -90,8 +102,50 @@
                             <td>3 Days</td>
                             <td>₹9,000</td>
                         </tr>
+                        </tbody>
                     </table>
                 </section>
+
+                <section id="packages">
+            <h2>Travel Packages</h2>
+            <table>
+                <thead>
+              <tr>
+
+                <th>Package</th>
+                <th>Duration</th>
+                <th>Destination</th>
+                <th>Price</th>
+                <th>Action</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>Mountain Escape</td>
+                <td>5 Days</td>
+                <td>Himachal</td>
+                <td>₹12,999</td>
+                <td><a href="#plan-trip">View</a></td>
+              </tr>  
+              <tr>
+                <td>Beach Holiday</td>
+                <td>4 Days</td>
+                <td>Goa</td>
+                <td>₹9,999</td>
+                <td><a href="#plan-trip">View</a></td>
+
+              </tr>
+              <tr>
+                <td>Royal Rajasthan</td>
+                <td>5 Days</td>
+                <td>Jaipur</td>
+                <td>₹11,999</td>
+                <td><a href="#plan-trip">View</a></td>
+
+              </tr>
+              </tbody>
+            </table>
+        </section>
 
 
                 <section>
@@ -119,15 +173,122 @@
                 </section>
 
 
+                <section id="plan-trip">
+                    <h2>Plan Your Trip</h2>
+                    <form>
+                       
+                        <fieldset>
+                            <legend>Personal Information</legend>
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" placeholder="Enter your name" name="name" required><br><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="Enter your email" name="email" required></fieldset><br><br>
+                    <fieldset>
+                        <legend>Trip details</legend>
+                    
+                    <label for="destination">Choose Destination</label>
+                
+
+<input
+    list="destinations"
+    id="destination"
+    name="destination"
+    placeholder="Search destination"
+    required>
+
+<datalist id="destinations">
+    <option value="Manali">
+    <option value="Goa">
+    <option value="Jaipur">
+    <option value="Himachal Pradesh">
+    <option value="Rajasthan">
+    <option value="Kerala">
+</datalist><br><br>
+
+                    <label for="date">Travel Date:</label> 
+                    <input type="date" name="date" id="date" required><br><br>
+                    <label for="people">Number of People:</label>
+                    <input type="number" min="1" max="20" id="people" name ="people" required><br><br>
+                    
+
+<label for="budget">Approximate Budget:</label>
+
+<input
+    type="number"
+    id="budget"
+    name="budget"
+    min="1000"
+    max="1000000"
+    placeholder="Enter your budget">
+                     <p>Trip Type:</p>
+                     <input type="radio" id="solo" name="trip-type" value="solo" required>
+                     <label for="solo">Solo</label>
+                     <input type="radio" id="family-trip" name="trip-type" value="family-trip" >
+                     <label for="family-trip">Family Trip</label>
+                     <input type="radio" id="friends" name="trip-type" value="friends">
+                     <label for="friends">Friends</label> </fieldset><br><br>
+                     <fieldset><legend>Activities & Requirements</legend>
+                     <p >Activities:</p>
+                     <input type="checkbox" id="trekking" name="activities" value="trekking">
+                     <label for="trekking">Trekking</label>
+                        <input type="checkbox" id="beach" name="activities" value="beach">
+                        <label for="beach">Beach</label>
+                        <input type="checkbox" id="sightseeing" name="activities" value="sightseeing">
+                        <label for="sightseeing">Sightseeing</label><br><br>
+                     <label for="message">Additional Requirements:</label><br>
+                     <textarea id="message" name="message" rows="4" cols="50" placeholder="Enter any additional requirements or preferences"></textarea></fieldset><br>
+                     <button type="submit">Plan My Trip</button>
+                    
+                        
+                    </form>
+                </section>
 
 
+                <section id="faq">
+                    <h2>Frequently Asked Questions</h2>
+                    <details>
+                        <summary>
+                            How can I plan my trip with Travel Sphere?
+                        </summary>
+                        <p>You can choose a destination, select your travel dates,
+                            choose activities, and submit the trip planning form.</p>
+                    </details>
+                     <details>
+                        <summary>Can I choose different trip types?</summary>
+                        <p>
+                            Yes. You can choose Solo, Family Trip, or Friends.
+                        </p>
+                     </details>
+                     <details>
+                        <summary>Can I select multiple activities?</summary>
+                        <p>
+                            Yes. You can select multiple activities such as
+                            trekking, beach activities, and sightseeing.
+                        </p>
+                    </details>
+                    <details>
+                        <summary>Can I customize my trip?</summary>
+                        <p>
+                            Yes. You can use the Additional Requirements field
+                            to add your preferences.
+                        </p>
+                    </details>
+                </section>
             </main>
+
             
             <footer id="contact">
                 <h3>Travel Sphere</h3>
                 <p>
                     Explore the World.Create memories.
                 </p>
+                <address>
+        Email:
+        <a href="mailto:info@travelsphere.com">
+            info@travelsphere.com
+        </a>
+    </address>
+
                 <p>&copy; 2026 Travel Sphere. All rights reserved.</p>
             </footer>
     
